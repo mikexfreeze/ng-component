@@ -1,27 +1,37 @@
-# NgComponent
+# 组件库
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5.
+> 技术开发框架基于 storybook
 
-## Development server
+## 技术选型
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. storybook
+2. cypress
+3. npm 标准包分发方式
+4. jest
 
-## Code scaffolding
+## 技术功能点
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### 基本功能
 
-## Build
+1. 组件依赖 package.json 配置
+2. 组件入口
+3. 代码打包
+    - ES6 module 模式
+4. 组件演示预览
+5. 组件文档
+6. 组件代码预览 code sandebox
+7. ESlint
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### 测试
 
-## Running unit tests
+1. e2e 测试 Cypress
+2. 单元测试 jest
+3. 模拟数据 mocha
+4. 快照测试 snapshot
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 后期功能
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. 按需引入
+2. 主题色
+3. 组件库文档样式
+4. 组件库部署
