@@ -35,3 +35,7 @@
 2. 主题色
 3. 组件库文档样式
 4. 组件库部署
+
+## 参考文档
+
+[Building an Angular 4 Component Library with the Angular CLI and ng-packagr](https://medium.com/@nikolasleblanc/building-an-angular-4-component-library-with-the-angular-cli-and-ng-packagr-53b2ade0701e)
