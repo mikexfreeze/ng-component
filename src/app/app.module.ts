@@ -13,6 +13,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HeaderModule } from './modules/header/header.module';
 import { ButtonModule } from './modules/button/button.module'
+import { TnTableV1Module } from './modules/tn-table-v1/tn-table-v1.module';
+
 registerLocaleData(zh);
 
 @NgModule({
@@ -27,6 +29,7 @@ registerLocaleData(zh);
     BrowserAnimationsModule,
     HeaderModule,
     ButtonModule,
+    TnTableV1Module,
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent]

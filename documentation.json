@@ -1,6 +1,66 @@
 {
     "pipes": [],
-    "interfaces": [],
+    "interfaces": [
+        {
+            "name": "Param",
+            "id": "interface-Param-5c82935d899ac9386d65028566ce685c",
+            "file": "src/app/modules/tn-table-v1/tn-table-v1.component.ts",
+            "type": "interface",
+            "sourceCode": "import { Component, OnInit, Input } from '@angular/core';\n\ninterface Person {\n  key: string;\n  name: string;\n  age: number;\n  address: string;\n}\n\ninterface Param {\n  titles: string[]\n}\n\n@Component({\n  selector: 'app-tn-table-v1',\n  templateUrl: './tn-table-v1.component.html',\n  styleUrls: ['./tn-table-v1.component.less']\n})\nexport class TnTableV1Component implements OnInit {\n  // titles: String[] = [\n  //   \"Name\", \"Age\", \"Address\", \"Action\"\n  // ]\n\n  listOfData: Person[] = [\n    {\n      key: '1',\n      name: 'John Brown',\n      age: 32,\n      address: 'New York No. 1 Lake Park'\n    },\n    {\n      key: '2',\n      name: 'Jim Green',\n      age: 42,\n      address: 'London No. 1 Lake Park'\n    },\n    {\n      key: '3',\n      name: 'Joe Black',\n      age: 32,\n      address: 'Sidney No. 1 Lake Park'\n    }\n  ];\n\n  @Input()\n  titles = [\"未设置titles\"]\n\n  constructor() {\n    // console.log(props)\n  }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "properties": [
+                {
+                    "name": "titles",
+                    "type": "string[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 11
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 150,
+            "methods": []
+        },
+        {
+            "name": "Person",
+            "id": "interface-Person-5c82935d899ac9386d65028566ce685c",
+            "file": "src/app/modules/tn-table-v1/tn-table-v1.component.ts",
+            "type": "interface",
+            "sourceCode": "import { Component, OnInit, Input } from '@angular/core';\n\ninterface Person {\n  key: string;\n  name: string;\n  age: number;\n  address: string;\n}\n\ninterface Param {\n  titles: string[]\n}\n\n@Component({\n  selector: 'app-tn-table-v1',\n  templateUrl: './tn-table-v1.component.html',\n  styleUrls: ['./tn-table-v1.component.less']\n})\nexport class TnTableV1Component implements OnInit {\n  // titles: String[] = [\n  //   \"Name\", \"Age\", \"Address\", \"Action\"\n  // ]\n\n  listOfData: Person[] = [\n    {\n      key: '1',\n      name: 'John Brown',\n      age: 32,\n      address: 'New York No. 1 Lake Park'\n    },\n    {\n      key: '2',\n      name: 'Jim Green',\n      age: 42,\n      address: 'London No. 1 Lake Park'\n    },\n    {\n      key: '3',\n      name: 'Joe Black',\n      age: 32,\n      address: 'Sidney No. 1 Lake Park'\n    }\n  ];\n\n  @Input()\n  titles = [\"未设置titles\"]\n\n  constructor() {\n    // console.log(props)\n  }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "properties": [
+                {
+                    "name": "address",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 7
+                },
+                {
+                    "name": "age",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 6
+                },
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "name",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 5
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 150,
+            "methods": []
+        }
+    ],
     "injectables": [],
     "classes": [
         {
@@ -384,6 +444,77 @@
                 }
             ],
             "stylesData": ""
+        },
+        {
+            "name": "TnTableV1Component",
+            "id": "component-TnTableV1Component-5c82935d899ac9386d65028566ce685c",
+            "file": "src/app/modules/tn-table-v1/tn-table-v1.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-tn-table-v1",
+            "styleUrls": [
+                "./tn-table-v1.component.less"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./tn-table-v1.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "titles",
+                    "defaultValue": "[\"未设置titles\"]",
+                    "line": 46
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "listOfData",
+                    "defaultValue": "[\n    {\n      key: '1',\n      name: 'John Brown',\n      age: 32,\n      address: 'New York No. 1 Lake Park'\n    },\n    {\n      key: '2',\n      name: 'Jim Green',\n      age: 42,\n      address: 'London No. 1 Lake Park'\n    },\n    {\n      key: '3',\n      name: 'Joe Black',\n      age: 32,\n      address: 'Sidney No. 1 Lake Park'\n    }\n  ]",
+                    "type": "Person[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 24
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 52
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit, Input } from '@angular/core';\n\ninterface Person {\n  key: string;\n  name: string;\n  age: number;\n  address: string;\n}\n\ninterface Param {\n  titles: string[]\n}\n\n@Component({\n  selector: 'app-tn-table-v1',\n  templateUrl: './tn-table-v1.component.html',\n  styleUrls: ['./tn-table-v1.component.less']\n})\nexport class TnTableV1Component implements OnInit {\n  // titles: String[] = [\n  //   \"Name\", \"Age\", \"Address\", \"Action\"\n  // ]\n\n  listOfData: Person[] = [\n    {\n      key: '1',\n      name: 'John Brown',\n      age: 32,\n      address: 'New York No. 1 Lake Park'\n    },\n    {\n      key: '2',\n      name: 'Jim Green',\n      age: 42,\n      address: 'London No. 1 Lake Park'\n    },\n    {\n      key: '3',\n      name: 'Joe Black',\n      age: 32,\n      address: 'Sidney No. 1 Lake Park'\n    }\n  ];\n\n  @Input()\n  titles = [\"未设置titles\"]\n\n  constructor() {\n    // console.log(props)\n  }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./tn-table-v1.component.less"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [],
+                "line": 46
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<nz-table #basicTable [nzData]=\"listOfData\" >\n  <thead>\n    <tr>\n      <th *ngFor=\"let title of titles\">{{title}}</th>\n      \n    </tr>\n  </thead>\n  <tbody>\n    <tr *ngFor=\"let data of basicTable.data\">\n      <td>{{ data.name }}</td>\n      <td>{{ data.age }}</td>\n      <td>{{ data.address }}</td>\n      <td>\n        <a>Action 一 {{ data.name }}</a>\n        <span>&nbsp;</span>\n        <a>Delete</a>\n      </td>\n    </tr>\n  </tbody>\n</nz-table>\n"
         }
     ],
     "modules": [
@@ -413,6 +544,9 @@
                         },
                         {
                             "name": "HeaderModule"
+                        },
+                        {
+                            "name": "TnTableV1Module"
                         }
                     ]
                 },
@@ -532,6 +666,43 @@
                     "elements": []
                 }
             ]
+        },
+        {
+            "name": "TnTableV1Module",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "TnTableV1Component"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "TnTableV1Component"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
         }
     ],
     "miscellaneous": {
@@ -604,6 +775,14 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/tn-table-v1.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/example/Button.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
@@ -629,7 +808,7 @@
                 "subtype": "variable",
                 "file": "src/stories/Button.stories.ts",
                 "type": "Story<NzDemoButtonBasicComponent>",
-                "defaultValue": "(args) => ({\n  props: args,\n})"
+                "defaultValue": "(args) => {\n  return {\n    moduleMetadata: {\n      imports: [\n        ButtonModule // the ngzorro modules that you want to use\n      ]\n    },\n    props: args,\n  }\n}"
             },
             {
                 "name": "Template",
@@ -638,6 +817,14 @@
                 "file": "src/stories/page-header.stories.ts",
                 "type": "Story<HeaderComponent>",
                 "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/tn-table-v1.stories.ts",
+                "type": "Story<TnTableV1Component>",
+                "defaultValue": "(args) => {\r\n  return {\r\n    moduleMetadata: {\r\n      imports: [\r\n        TnTableV1Module // the ngzorro modules that you want to use\r\n      ]\r\n    },\r\n    props: args,\r\n  }\r\n}"
             },
             {
                 "name": "Template",
@@ -788,7 +975,25 @@
                     "subtype": "variable",
                     "file": "src/stories/Button.stories.ts",
                     "type": "Story<NzDemoButtonBasicComponent>",
-                    "defaultValue": "(args) => ({\n  props: args,\n})"
+                    "defaultValue": "(args) => {\n  return {\n    moduleMetadata: {\n      imports: [\n        ButtonModule // the ngzorro modules that you want to use\n      ]\n    },\n    props: args,\n  }\n}"
+                }
+            ],
+            "src/stories/tn-table-v1.stories.ts": [
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/tn-table-v1.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/tn-table-v1.stories.ts",
+                    "type": "Story<TnTableV1Component>",
+                    "defaultValue": "(args) => {\r\n  return {\r\n    moduleMetadata: {\r\n      imports: [\r\n        TnTableV1Module // the ngzorro modules that you want to use\r\n      ]\r\n    },\r\n    props: args,\r\n  }\r\n}"
                 }
             ],
             "src/stories/example/Button.stories.ts": [
@@ -863,7 +1068,7 @@
         ]
     },
     "coverage": {
-        "count": 3,
+        "count": 2,
         "status": "low",
         "files": [
             {
@@ -900,6 +1105,33 @@
                 "name": "HeaderComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/tn-table-v1/tn-table-v1.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TnTableV1Component",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/tn-table-v1/tn-table-v1.component.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Param",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/tn-table-v1/tn-table-v1.component.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Person",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
                 "status": "low"
             },
             {
@@ -1085,6 +1317,26 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "YourStory",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/tn-table-v1.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/tn-table-v1.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

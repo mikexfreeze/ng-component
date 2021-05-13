@@ -3,8 +3,7 @@
 import { Story } from '@storybook/angular/types-6-0';
 import { Meta } from '@storybook/angular/types-6-0';
 import { NzDemoButtonBasicComponent } from '../app/modules/button/button.component';
-import { NzButtonModule } from 'ng-zorro-antd/button';
-
+import { ButtonModule } from '../app/modules/button/button.module'
 export default {
   title: 'NzDemoButtonBasicComponent',
   component: NzDemoButtonBasicComponent,
@@ -15,7 +14,7 @@ const Template: Story<NzDemoButtonBasicComponent> = (args) => {
   return {
     moduleMetadata: {
       imports: [
-        NzButtonModule // the ngzorro modules that you want to use
+        ButtonModule // the ngzorro modules that you want to use
       ]
     },
     props: args,
