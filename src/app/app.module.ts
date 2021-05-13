@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HeaderModule } from './modules/header/header.module';
+import { ButtonModule } from './modules/button/button.module'
 registerLocaleData(zh);
 
 @NgModule({
@@ -24,7 +25,8 @@ registerLocaleData(zh);
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    HeaderModule
+    HeaderModule,
+    ButtonModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent]
