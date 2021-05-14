@@ -1,2 +1,11 @@
+
+<tn-table-v1 [nzData]="nzData" 
+  [nzCell]="tableCell"
+  [columns]="columns">
+</tn-table-v1>
+<ng-template #tableCell let-user="name">
+  <span (click)="hdlClick(user)">{{user}}</span>
+</ng-template>
+
 <app-header>Such Header</app-header>
 <nz-demo-button-basic></nz-demo-button-basic> 

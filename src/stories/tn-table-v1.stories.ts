@@ -25,7 +25,12 @@ const Template: Story<TnTableV1Component> = (args) => {
 //👇 Each story then reuses that template
 export const Primary = Template.bind({});
 Primary.args = {
-  titles: ["Name", "Age", "Address", "Action"],
+  columns: [
+    {name: "Name", field: 'name'},
+    {name: "Age", field: 'age'},
+    {name: "Address", field: 'address'},
+    {name: "Action", field: 'Action'}
+  ],
   nzData: [
     {
       key: '1',

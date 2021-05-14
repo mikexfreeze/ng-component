@@ -1,18 +1,17 @@
 <nz-table #basicTable [nzData]="nzData" >
   <thead>
     <tr>
-      <th *ngFor="let title of titles">{{title}}</th>
+      <th *ngFor="let column of columns">{{column.name}}</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let data of basicTable.data">
-      <td>{{ data.name }}</td>
-      <td>{{ data.age }}</td>
-      <td>{{ data.address }}</td>
-      <td>
-        <a>Action 一 {{ data.name }}</a>
-        <span>&nbsp;</span>
-        <a>Delete</a>
+      <td *ngFor="let column of columns">
+        <span *ngIf="column.field; else renderContent">{{data[column.field]}}</span>
+        <!-- <ng-template #renderContent [ngTemplateOutlet]="data.template"></ng-template> -->
+        <ng-template #renderContent>
+          </ng-template>
+          <ng-template *ngTemplateOutlet="nzCell; context: data"></ng-template>
       </td>
     </tr>
   </tbody>
