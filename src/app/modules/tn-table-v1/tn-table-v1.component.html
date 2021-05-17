@@ -1,18 +1,51 @@
-<nz-table #basicTable [nzData]="nzData" >
+<nz-table #basicTable 
+  [nzData]="nzData" 
+  [nzFrontPagination]="false" nzShowPagination nzShowSizeChanger nzTableLayout="fixed" nzShowQuickJumper
+  [nzTotal]="total" 
+  [nzPageIndex]="nzPageIndex" 
+  (nzPageIndexChange)="nzPageIndexChange($event)"
+  (nzPageSizeChange)="nzPageSizeChange($event)"
+  [nzLoading]="nzLoading"
+  [nzScroll]="{ y: 'calc(100vh - 230px)' }"
+  [nzShowTotal]="totalTemplate" >
   <thead>
     <tr>
-      <th *ngFor="let column of columns">{{column.name}}</th>
+      <ng-container *ngFor="let column of columns">
+        <th *ngIf="column.type === 'check'; else th" [nzChecked]="checked"></th>
+        <ng-template #th>
+          <th>{{column.name}}</th>
+        </ng-template>
+      </ng-container>
+      <!-- <th *ngFor="let column of columns">{{column.name}}</th> -->
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let data of basicTable.data">
-      <td *ngFor="let column of columns">
-        <span *ngIf="column.field; else renderContent">{{data[column.field]}}</span>
-        <!-- <ng-template #renderContent [ngTemplateOutlet]="data.template"></ng-template> -->
-        <ng-template #renderContent>
-          </ng-template>
-          <ng-template *ngTemplateOutlet="nzCell; context: data"></ng-template>
-      </td>
+      <!-- <td [nzChecked]="true"></td> -->
+      <ng-container *ngFor="let column of columns">
+        <td *ngIf="column.type !== 'check'; else td">
+          <span *ngIf="column.field">{{data[column.field]}}</span>
+          <ng-container *ngIf="column.type === 'custom'">
+            <ng-template *ngTemplateOutlet="nzCell; context: data"></ng-template>
+          </ng-container>
+          <ng-container *ngIf="column.type === 'custom1'">
+            <ng-template *ngTemplateOutlet="nzCell1; context: data"></ng-template>
+          </ng-container>
+          <ng-container *ngIf="column.type === 'custom2'">
+            <ng-template *ngTemplateOutlet="nzCell2; context: data"></ng-template>
+          </ng-container>
+          <ng-container *ngIf="column.type === 'custom3'">
+            <ng-template *ngTemplateOutlet="nzCell3; context: data"></ng-template>
+          </ng-container>
+        </td>
+        <ng-template #td>
+          <td [nzChecked]="setOfCheckedId.has(data[column.field])"></td>
+        </ng-template>
+        <!-- <span *ngIf="column.type === 'check'" [nzChecked]="setOfCheckedId.has(data[column.field])></span> -->
+      </ng-container>
+      
     </tr>
   </tbody>
+  <ng-template #totalTemplate let-total class="totalCount"> 共有 {{ total }} 条 </ng-template>
+  
 </nz-table>

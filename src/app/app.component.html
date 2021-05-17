@@ -1,9 +1,12 @@
 
 <tn-table-v1 [nzData]="nzData" 
   [nzCell]="tableCell"
-  [columns]="columns">
+  [columns]="columns"
+  [total]="total" 
+  [nzPageIndexChange]="nzPageIndexChange">
 </tn-table-v1>
-<ng-template #tableCell let-user="name">
+<ng-template #tableCell let-user="name" 
+  >
   <span (click)="hdlClick(user)">{{user}}</span>
 </ng-template>
 

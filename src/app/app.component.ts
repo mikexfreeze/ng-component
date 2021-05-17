@@ -12,11 +12,18 @@ export class AppComponent {
     console.log(e)
   }
 
+  total = 50
+
+  nzPageIndexChange(e: any){
+    console.log(e)
+  }
+
   columns = [
+    {name: "", type: 'check'},
     {name: "Name", field: 'name'},
     {name: "Age", field: 'age'},
     {name: "Address", field: 'address'},
-    {name: "Action", template: 'custom' }
+    {name: "Action", type: 'custom' }
   ]
   
   nzData = [
@@ -32,11 +39,65 @@ export class AppComponent {
       age: 42,
       address: 'London No. 1 Lake Park'
     },
-    {
-      key: '3',
-      name: 'Joe Black',
-      age: 32,
-      address: 'Sidney No. 1 Lake Park'
-    }
+    {key: '3',name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
+    {name: 'Joe Black',age: 32,address: 'Sidney No. 1 Lake Park'},
   ]
 }
