@@ -3,11 +3,11 @@
   [nzCell]="tableCell"
   [columns]="columns"
   [total]="total" 
+  [onAllChecked]="onAllChecked" 
   [nzPageIndexChange]="nzPageIndexChange">
 </tn-table-v1>
-<ng-template #tableCell let-user="name" 
-  >
-  <span (click)="hdlClick(user)">{{user}}</span>
+<ng-template #tableCell let-user="name">
+  <td (click)="hdlClick(user)">{{user}}</td>
 </ng-template>
 
 <app-header>Such Header</app-header>

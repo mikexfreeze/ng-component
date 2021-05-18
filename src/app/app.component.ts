@@ -18,6 +18,10 @@ export class AppComponent {
     console.log(e)
   }
 
+  onAllChecked = (e: any) => {
+    console.log(e)
+  }
+
   columns = [
     {name: "", type: 'check'},
     {name: "Name", field: 'name'},
@@ -29,7 +33,7 @@ export class AppComponent {
   nzData = [
     {
       key: '1',
-      name: 'John Brown',
+      name: ["权限测试", "呼叫座席", "在线座席"],
       age: 32,
       address: 'New York No. 1 Lake Park'
     },

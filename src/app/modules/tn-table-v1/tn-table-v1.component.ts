@@ -15,15 +15,18 @@ export class TnTableV1Component<T = NzSafeAny> implements OnInit, OnChanges{
   @Input() nzCell1: any;
   @Input() nzCell2: any;
   @Input() nzCell3: any;
+  @Input() nzCell4: any;
   @Input() total = 0;
   @Input() setOfCheckedId = new Set();
   @Input() nzPageIndex = 1;
   @Input() @InputBoolean() nzLoading = false;
   @Input() nzPageIndexChange: any
   @Input() nzPageSizeChange: any
+  @Input() nzCheckedChange: any
+  @Input() onAllChecked: any
+  @Input() checked = false;
   // @Output() readonly nzPageIndexChange = new EventEmitter<number>();
 
-  checked = true;
 
   isString(value: any){
     return typeof value === "string"

@@ -11,7 +11,9 @@
   <thead>
     <tr>
       <ng-container *ngFor="let column of columns">
-        <th *ngIf="column.type === 'check'; else th" [nzChecked]="checked"></th>
+        <th *ngIf="column.type === 'check'; else th"
+            (nzCheckedChange)="onAllChecked($event)"
+            [nzChecked]="checked"></th>
         <ng-template #th>
           <th>{{column.name}}</th>
         </ng-template>
@@ -23,27 +25,29 @@
     <tr *ngFor="let data of basicTable.data">
       <!-- <td [nzChecked]="true"></td> -->
       <ng-container *ngFor="let column of columns">
-        <td *ngIf="column.type !== 'check'; else td">
-          <span *ngIf="column.field">{{data[column.field]}}</span>
-          <ng-container *ngIf="column.type === 'custom'">
-            <ng-template *ngTemplateOutlet="nzCell; context: data"></ng-template>
-          </ng-container>
-          <ng-container *ngIf="column.type === 'custom1'">
-            <ng-template *ngTemplateOutlet="nzCell1; context: data"></ng-template>
-          </ng-container>
-          <ng-container *ngIf="column.type === 'custom2'">
-            <ng-template *ngTemplateOutlet="nzCell2; context: data"></ng-template>
-          </ng-container>
-          <ng-container *ngIf="column.type === 'custom3'">
-            <ng-template *ngTemplateOutlet="nzCell3; context: data"></ng-template>
-          </ng-container>
-        </td>
-        <ng-template #td>
-          <td [nzChecked]="setOfCheckedId.has(data[column.field])"></td>
-        </ng-template>
-        <!-- <span *ngIf="column.type === 'check'" [nzChecked]="setOfCheckedId.has(data[column.field])></span> -->
+        <ng-container *ngIf="!column.type">
+          <td *ngIf="column.field" nz-tooltip [nzTooltipTitle]="data[column.field]">{{data[column.field]}}</td>
+        </ng-container>
+        <ng-container *ngIf="column.type === 'check'">
+          <td [nzChecked]="setOfCheckedId.has(data[column.field])" 
+              (nzCheckedChange)="nzCheckedChange(data[column.field], $event)"></td>
+        </ng-container>
+        <ng-container *ngIf="column.type === 'custom'">
+          <ng-template *ngTemplateOutlet="nzCell; context: data"></ng-template>
+        </ng-container>
+        <ng-container *ngIf="column.type === 'custom1'">
+          <ng-template *ngTemplateOutlet="nzCell1; context: data"></ng-template>
+        </ng-container>
+        <ng-container *ngIf="column.type === 'custom2'">
+          <ng-template *ngTemplateOutlet="nzCell2; context: data"></ng-template>
+        </ng-container>
+        <ng-container *ngIf="column.type === 'custom3'">
+          <ng-template *ngTemplateOutlet="nzCell3; context: data"></ng-template>
+        </ng-container>
+        <ng-container *ngIf="column.type === 'custom4'">
+          <ng-template *ngTemplateOutlet="nzCell3; context: data"></ng-template>
+        </ng-container>
       </ng-container>
-      
     </tr>
   </tbody>
   <ng-template #totalTemplate let-total class="totalCount"> 共有 {{ total }} 条 </ng-template>

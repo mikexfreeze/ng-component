@@ -1,6 +1,6 @@
 {
-  "name": "ng-component",
-  "version": "0.0.1",
+  "name": "tn-ng-components",
+  "version": "0.0.2",
   "description": "NG component base on ng-zorro-antd",
   "main": "lib/index.js",
   "scripts": {
